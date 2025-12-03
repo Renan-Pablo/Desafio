@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Conta conta1 = new Conta();
-        conta1.nome = "Renan Pablo";
-        conta1.tipoConta = "Corrente";
-        conta1.saldoAtual = 2500.00;
+        conta1.setNome("Renan Pablo");
+        conta1.setTipoConta("Corrente");
+        conta1.setSaldoAtual(2500.00);
 
         conta1.exibeDadosIniciais();
 
@@ -34,7 +34,7 @@ public class Main {
                 case 3:
                     System.out.println("Qual valor deseja transferir: ");
                     double valorTransferido = input.nextDouble();
-                    if (valorTransferido > conta1.saldoAtual){
+                    if (valorTransferido > conta1.getSaldoAtual()){
                         System.out.println("Não há saldo suficiente para fazer essa transferêmcia.");
                         valorTransferido = input.nextDouble();
                     }

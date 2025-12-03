@@ -1,9 +1,33 @@
 public class Conta {
-    String nome;
-    String tipoConta;
-    double saldoAtual;
+    private String nome;
+    private String tipoConta;
+    private double saldoAtual;
 
-    void exibeDadosIniciais(){
+    public String getNome() {
+        return nome;
+    }
+
+    public String getTipoConta() {
+        return tipoConta;
+    }
+
+    public double getSaldoAtual() {
+        return saldoAtual;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setTipoConta(String tipoConta) {
+        this.tipoConta = tipoConta;
+    }
+
+    public void setSaldoAtual(double saldoAtual) {
+        this.saldoAtual = saldoAtual;
+    }
+
+    public void exibeDadosIniciais(){
         System.out.println("********************************************");
         System.out.println("Dados Inicias do Cliente:\n");
         System.out.printf("Nome:             %s\n", nome);
@@ -12,7 +36,7 @@ public class Conta {
         System.out.println("********************************************");
     }
 
-    void menuDeOpcoes(){
+    public void menuDeOpcoes(){
         System.out.println("1- Consultar saldos");
         System.out.println("2- Receber valor");
         System.out.println("3- Transferir valor");
@@ -20,14 +44,14 @@ public class Conta {
         System.out.println("Digite a opção desejada:");
     }
 
-    void mostrarSaldo(){
+    public void mostrarSaldo(){
         System.out.printf("Saldo atual é de R$ %.2f\n", saldoAtual);
     }
 
-    void valorRecebido(double valor){
+    public void valorRecebido(double valor){
         saldoAtual += valor;
     }
-    void valorTransferido(double valor){
+    public void valorTransferido(double valor){
         saldoAtual -= valor;
     }
 }
